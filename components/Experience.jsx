@@ -1,0 +1,69 @@
+import React from 'react'
+import { Card, CardContent } from './ui/card';
+import Image from 'next/image';
+
+export const Experience = () => {
+
+    const experiences = [
+        {
+            logo: "/public/next.svg",
+            title: "Founding Engineer",
+            company: "Naia Redesign",
+            duration: "Aug 2025 – Present",
+        },
+        {
+            logo: "/logos/adobe.png",
+            title: "3x Grant Recipient",
+            company: "Adobe Inc.",
+            duration: "2024 – Present",
+        },
+        {
+            logo: "/logos/freelance.png",
+            title: "Freelance",
+            company: "Building full stack apps",
+            duration: "2024 – Early 2025",
+        },
+        {
+            logo: "/logos/stealth.png",
+            title: "Full Stack Development – TA",
+            company: "Stealth Startup",
+            duration: "Feb 2024 – June 2024",
+        },
+    ];
+
+    return (
+        <section className='flex flex-col items-center'>
+            <h1 className='text-2xl font-semibold my-10 '>Experience</h1>
+
+            <div className="w-full max-w-2xl space-y-6">
+
+            {
+                experiences.map((exp, idx) => (
+                    <Card
+                        key={idx}
+                        className="flex flex-row items-center justify-between w-full p-4 hover:bg-muted transition rounded-xl">
+                        <CardContent className="flex items-center gap-4 p-0 ">
+                            <div className="w-10 h-10 relative rounded-full overflow-hidden">
+                                <Image
+                                    src={exp.logo}
+                                    alt={exp.company}
+                                    fill
+                                    className="object-cover"
+                                />
+                            </div>
+
+                            <div>
+                                <h3 className="font-semibold">{exp.title}</h3>
+                                <p className="text-sm text-muted-foreground">{exp.company}</p>
+                            </div>
+                        </CardContent>
+                        <p className="text-sm text-muted-foreground">{exp.duration}</p>
+                    </Card>
+                ))
+            }
+            </div>
+
+
+        </section>
+    )
+}
