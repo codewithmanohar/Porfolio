@@ -8,17 +8,19 @@ import Projects from "@/components/Projects";
 import { Skills } from "@/components/Skills";
 
 
+
 export default function Home() {
   return (
-    <div className="mx-auto container px-6 relative">
-        <Header /> 
-        <HeroSection />
-        <Projects />
-        <Experience />
-        <Skills />
-        <Education />
-        <Contact /> 
-        <Footer />
+    <div className="max-w-6xl mx-auto px-6 sm:px-8 relative">
+      <Header /> 
+      <HeroSection />
+      <Projects />
+      <Experience />
+      <Skills />
+      <Education />
+      <Contact /> 
+      <Footer />
     </div>
   );
 }
+

@@ -33,7 +33,7 @@ export const Experience = () => {
 
     return (
         <section className='flex flex-col items-center'>
-            <h1 className='text-2xl font-semibold my-10 '>Experience</h1>
+            <h1 className='title'>Experience</h1>
 
             <div className="w-full max-w-2xl space-y-6">
 

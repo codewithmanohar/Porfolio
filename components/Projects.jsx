@@ -10,6 +10,11 @@ import {
 } from "@/components/ui/card"
 import { Button } from './ui/button'
 import Link from 'next/link';
+import Image from 'next/image';
+import { imgs } from '@/app/data';
+import { ExternalLink, Github } from 'lucide-react';
+import { TbWorld } from "react-icons/tb";
+import { FaGithub } from "react-icons/fa6";
 
 const Projects = () => {
      const projects = [
@@ -48,51 +53,44 @@ const Projects = () => {
     ];
 
     return (
-        <section className='flex flex-col items-center justify-center text-center min-h-[80%] px-4 py-20'>
-            <h1>Work / Projects</h1>
+        <section className='flex flex-col items-center justify-center text-center min-h-[80%] px-4 pb-20'>
+            <h1 className='title '>Projects</h1>
             
         
             <div className='flex gap-5 w-full sm:w-2/3 flex-wrap justify-center text-start ' >
                 {
 
                     projects.map((project , idx) => (
-                        <Card key={idx} className="sm:w-md max-w-sm my-5 px-2 ">
-                            <CardHeader>
-                                <CardTitle>{project.title}</CardTitle>
+                        <Card key={idx} className="sm:w-[48%] max-w-sm my-5 px-5  ">
+                            <CardHeader className="flex flex-col ">
+                                <Image 
+                                    className='p-2 '
+                                    width={50}
+                                    height={50}
+                                    alt='logo' 
+                                    src={imgs.next_logo} 
+                                />
+                                <CardTitle className="px-0">{project.title}</CardTitle>
                             </CardHeader>
-                            <CardDescription className="text-wrap">{project.description}</CardDescription>
+                            <CardDescription className="text-wrap text-start ml-6">{project.description}</CardDescription>
                             <CardContent className="flex gap-2 flex-wrap">
                                 {project.techStack.map((tech , idx) => (
-                                    <Button key={idx} variant="outline" size="sm">{tech}</Button>
+                                    <Button key={idx} variant="skills" size="smbt">{tech}</Button>
                                 ))}
                             </CardContent>
                             <CardFooter className="flex gap-2" >
-                                <Button size="sm" variant="default" asChild>
-                                    <Link href={project.website}>Website</Link>
+                                <Button size="smbt" variant="default" asChild>
+
+                                    <Link href={project.website}><TbWorld /> Website</Link>
                                 </Button>
-                                <Button size="sm" variant="default" asChild>
-                                    <Link href={project.code}>Code</Link>
+                                <Button size="smbt" variant="default" asChild>
+                                    <Link href={project.code}><FaGithub /> Code</Link>
                                 </Button>
                             </CardFooter>
                         </Card>
                     ))
                 }
-                {/* <Card className="w-40 my-10">
-                    <CardHeader>
-                        <CardTitle>Enrich Salon Management</CardTitle>
-                        <CardDescription>
-                            Enrich Hair Salon is a salon booking system with online payments and an admin dashboard for managing services and bookings.</CardDescription>
-
-                    </CardHeader>
-                    <CardContent>
-                        <Button variant="outline" size="sm">HTML</Button>
-                        <Button variant="outline" size="sm">HTML</Button>
-                    </CardContent>
-                    <CardFooter className="flex gap-5">
-                        <Button variant="secondary">Website</Button>
-                        <Button variant="secondary">Code</Button>
-                    </CardFooter>
-                </Card> */}
+                
             </div>
 
         </section>

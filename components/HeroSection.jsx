@@ -6,7 +6,7 @@ import { motion } from "framer-motion";
 
 export default function HeroSection() {
   return (
-    <section className="flex flex-col items-center justify- text-center sm:min-h-screen px-4 pt-32 sm:pt-40">
+    <section className="flex flex-col items-center justify- text-center sm:min-h-screen px-4 py-32 sm:py-0 sm:pt-40">
       {/* Avatar */}
       <motion.div
         initial={{ scale: 0.8, opacity: 0 }}

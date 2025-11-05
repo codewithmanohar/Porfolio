@@ -6,11 +6,11 @@ import logo from "../public/next.svg"
 export const Education = () => {
     return (
         <section className='py-10 flex flex-col items-center '>
-            <h2 className='text-2xl font-semibold my-8'>Education</h2>
+            <h2 className='title'>Education</h2>
             <div className="w-full max-w-2xl space-y-6 ">
                 <Card className="flex sm:flex-row flex-col sm:items-center gap-2 justify-between p-4 hover:bg-muted transition rounded-xl">
                     <CardContent className="flex items-center gap-5 p-0">
-                        <div className="w-10 h-10 relative rounded-full overflow-hidden">
+                        <div className="w-10 h-10 relative rounded-full overflow-hidden ">
                             <Image
                                 src={logo}
                                 alt='logo'
