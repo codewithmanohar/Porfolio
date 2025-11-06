@@ -15,42 +15,9 @@ import { imgs } from '@/app/data';
 import { ExternalLink, Github } from 'lucide-react';
 import { TbWorld } from "react-icons/tb";
 import { FaGithub } from "react-icons/fa6";
+import { projects } from '@/app/data';
 
 const Projects = () => {
-     const projects = [
-        {
-            title: "Enrich Salon Management",
-            description:
-                "Enrich Hair Salon is a salon booking system with online payments and an admin dashboard for managing services and bookings.",
-            techStack: ["HTML", "CSS", "JavaScript"],
-            website: "https://enrich-salon-demo.netlify.app",
-            code: "https://github.com/example/enrich-salon",
-        },
-        {
-            title: "LeafMart – Plant Selling Website",
-            description:
-                "LeafMart is an e-commerce platform for buying indoor and outdoor plants, featuring a clean UI, product filters, and secure checkout.",
-            techStack: ["Next.js", "Tailwind CSS", "MongoDB"],
-            website: "https://leafmart-demo.vercel.app",
-            code: "https://github.com/example/leafmart",
-        },
-        {
-            title: "AI Quiz App",
-            description:
-                "An AI-powered quiz app that generates questions based on topic and difficulty, with a timer and result summary page.",
-            techStack: ["React", "OpenAI API", "Context API"],
-            website: "https://ai-quiz-demo.vercel.app",
-            code: "https://github.com/example/ai-quiz-app",
-        },
-        {
-            title: "Civix – Citizen Engagement Dashboard",
-            description:
-                "Civix is a full-stack web platform that connects citizens and government, enabling issue tracking and feedback submission.",
-            techStack: ["React", "Node.js", "MongoDB"],
-            website: "https://civix-demo.vercel.app",
-            code: "https://github.com/example/civix",
-        },
-    ];
 
     return (
         <section className='flex flex-col items-center justify-center text-center min-h-[80%] px-4 pb-20'>
@@ -61,7 +28,7 @@ const Projects = () => {
                 {
 
                     projects.map((project , idx) => (
-                        <Card key={idx} className="sm:w-[48%] max-w-sm my-5 px-5  ">
+                        <Card key={idx} className="sm:w-[48%] max-w-sm my-5 px-5 bg-background  ">
                             <CardHeader className="flex flex-col ">
                                 <Image 
                                     className='p-2 '
@@ -72,19 +39,19 @@ const Projects = () => {
                                 />
                                 <CardTitle className="px-0">{project.title}</CardTitle>
                             </CardHeader>
-                            <CardDescription className="text-wrap text-start ml-6">{project.description}</CardDescription>
+                            <CardDescription className="text-wrap text-start ml-6 ">{project.description}</CardDescription>
                             <CardContent className="flex gap-2 flex-wrap">
                                 {project.techStack.map((tech , idx) => (
                                     <Button key={idx} variant="skills" size="smbt">{tech}</Button>
                                 ))}
                             </CardContent>
                             <CardFooter className="flex gap-2" >
-                                <Button size="smbt" variant="default" asChild>
+                                <Button size="smbt1" variant="default" asChild>
 
-                                    <Link href={project.website}><TbWorld /> Website</Link>
+                                    <a href={project.website} target='_blank'><TbWorld className='size-4'/> Website</a>
                                 </Button>
-                                <Button size="smbt" variant="default" asChild>
-                                    <Link href={project.code}><FaGithub /> Code</Link>
+                                <Button size="smbt1" variant="default" asChild>
+                                    <a href={project.code} target='_blank'><FaGithub /> Source</a>
                                 </Button>
                             </CardFooter>
                         </Card>

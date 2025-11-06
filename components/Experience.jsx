@@ -7,28 +7,28 @@ export const Experience = () => {
     const experiences = [
         {
             logo: "/public/next.svg",
-            title: "Founding Engineer",
-            company: "Naia Redesign",
-            duration: "Aug 2025 – Present",
+            title: "Full Stack Intern",
+            company: "Infosys Springboard",
+            duration: "Aug 2025 – Oct 2025",
         },
         {
             logo: "/logos/adobe.png",
-            title: "3x Grant Recipient",
-            company: "Adobe Inc.",
-            duration: "2024 – Present",
+            title: "MERN Stack Intern",
+            company: "UptoSkills ",
+            duration: "Jan 2025 – Apr 2025",
         },
-        {
-            logo: "/logos/freelance.png",
-            title: "Freelance",
-            company: "Building full stack apps",
-            duration: "2024 – Early 2025",
-        },
-        {
-            logo: "/logos/stealth.png",
-            title: "Full Stack Development – TA",
-            company: "Stealth Startup",
-            duration: "Feb 2024 – June 2024",
-        },
+        // {
+        //     logo: "/logos/freelance.png",
+        //     title: "Freelance",
+        //     company: "Building full stack apps",
+        //     duration: "2024 – Early 2025",
+        // },
+        // {
+        //     logo: "/logos/stealth.png",
+        //     title: "Full Stack Development – TA",
+        //     company: "Stealth Startup",
+        //     duration: "Feb 2024 – June 2024",
+        // },
     ];
 
     return (
@@ -55,6 +55,7 @@ export const Experience = () => {
                             <div>
                                 <h3 className="font-semibold">{exp.title}</h3>
                                 <p className="text-sm text-muted-foreground">{exp.company}</p>
+                                {/* <p className=''>Lorem ipsum dolor sit, amet consectetur adipisicing elit. A odio soluta, aperiam veniam iusto tempora reprehenderit debitis enim aliquam quam, esse eaque velit harum ut consequuntur tenetur amet blanditiis deserunt.</p> */}
                             </div>
                         </CardContent>
                         <p className="text-sm text-muted-foreground">{exp.duration}</p>

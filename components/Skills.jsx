@@ -1,20 +1,9 @@
 import React from 'react'
 import { Button } from './ui/button';
-
+import { skills } from '@/app/data';
 export const Skills = () => {
 
-    const skills = [
-  { name: "HTML" },
-  { name: "CSS" },
-  { name: "JavaScript" },
-  { name: "React.js" },
-  { name: "Next.js" },
-  { name: "Tailwind CSS" },
-  { name: "Node.js" },
-  { name: "Express.js" },
-  { name: "MongoDB" },
-  { name: "Git & GitHub" },
-];
+    
 
   return (
     <section className="py-10 flex flex-col items-center  ">
