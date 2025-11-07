@@ -11,8 +11,6 @@ import {
 import { Button } from './ui/button'
 import Link from 'next/link';
 import Image from 'next/image';
-import { imgs } from '@/app/data';
-import { ExternalLink, Github } from 'lucide-react';
 import { TbWorld } from "react-icons/tb";
 import { FaGithub } from "react-icons/fa6";
 import { projects } from '@/app/data';
@@ -28,7 +26,7 @@ const Projects = () => {
                 {
 
                     projects.map((project , idx) => (
-                        <Card key={idx} className="sm:w-[48%] max-w-sm my-5 px-5 bg-background  ">
+                        <Card key={idx} className="sm:w-[48%] max-w-sm my-5 px-5 bg-background ">
                             <CardHeader className="flex flex-col ">
                                 <Image 
                                     className='p-2 '
@@ -37,17 +35,18 @@ const Projects = () => {
                                     alt='logo' 
                                     src={project.icon} 
                                 />
-                                <CardTitle className="px-0">{project.title}</CardTitle>
+                                <CardTitle className="px-0 tracking-tight">{project.title}</CardTitle>
                             </CardHeader>
+
                             <CardDescription className="text-wrap text-start ml-6 ">{project.description}</CardDescription>
                             <CardContent className="flex gap-2 flex-wrap">
                                 {project.techStack.map((tech , idx) => (
                                     <Button key={idx} variant="skills" size="smbt">{tech}</Button>
                                 ))}
                             </CardContent>
-                            <CardFooter className="flex gap-2" >
-                                <Button size="smbt1" variant="default" asChild>
 
+                            <CardFooter className="flex gap-2 bottom-5 left-5" >
+                                <Button size="smbt1" variant="default" asChild>
                                     <a href={project.website} target='_blank'><TbWorld className='size-4'/> Website</a>
                                 </Button>
                                 <Button size="smbt1" variant="default" asChild>

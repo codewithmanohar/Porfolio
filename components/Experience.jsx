@@ -17,8 +17,7 @@ export const Experience = () => {
                 experiences.map((exp, idx) => (
                     <Card
                         key={idx}
-                        className="flex flex-row items-center justify-between w-full p-4 hover:bg-muted transition rounded-xl">
-                        <CardContent className="flex items-center gap-4 p-0 ">
+                        className="flex flex-row items-center justify-start w-full p-4 hover:bg-muted transition rounded-xl">
                             <div className="w-10 h-10 relative rounded-full overflow-hidden">
                                 <Image
                                     src={exp.logo}
@@ -27,14 +26,15 @@ export const Experience = () => {
                                     className="object-cover"
                                 />
                             </div>
+                        <CardContent className="flex items-start sm:justify-between w-full flex-col sm:flex-row gap-0 sm:gap-4 p-0  sm:text-lg text-sm">
+                            
 
                             <div>
                                 <h3 className="font-semibold">{exp.title}</h3>
-                                <p className="text-sm text-muted-foreground">{exp.company}</p>
-                                {/* <p className=''>Lorem ipsum dolor sit, amet consectetur adipisicing elit. A odio soluta, aperiam veniam iusto tempora reprehenderit debitis enim aliquam quam, esse eaque velit harum ut consequuntur tenetur amet blanditiis deserunt.</p> */}
+                                <p className="text-sm text-muted-foreground text-nowrap">{exp.company}</p>
                             </div>
+                            <p className="text-[12px] sm:text-sm  text-muted-foreground">{exp.duration}</p>
                         </CardContent>
-                        <p className="text-sm text-muted-foreground">{exp.duration}</p>
                     </Card>
                 ))
             }

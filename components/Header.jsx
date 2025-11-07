@@ -47,7 +47,7 @@ const Header = () => {
 
                     <NavigationMenuItem>
                         <NavigationMenuLink asChild>
-                            <a href="https://www.github.com" target='_blank' rel='noopener norefferer' >
+                            <a href="https://github.com/codewithmanohar" target='_blank' rel='noopener norefferer' >
                                 <Github className="w-5 h-5 sm:w-6 sm:h-6" />
                             </a>
                         </NavigationMenuLink>
@@ -55,7 +55,7 @@ const Header = () => {
 
                     <NavigationMenuItem>
                         <NavigationMenuLink asChild>
-                            <a href="https://www.x.com" target='_blank'>
+                            <a href="https://x.com/Manoharkum86163" target='_blank'>
                                 <FaXTwitter className="w-5 h-5 sm:w-6 sm:h-6" />
                             </a>
                         </NavigationMenuLink>
@@ -63,7 +63,7 @@ const Header = () => {
 
                     <NavigationMenuItem>
                         <NavigationMenuLink asChild>
-                            <a href="https://www.linkedIn.com" target='_blank'>
+                            <a href="https://www.linkedin.com/in/manoharkumardev" target='_blank'>
                                 <FaLinkedinIn className="w-5 h-5 sm:w-6 sm:h-6" />
                             </a>
                         </NavigationMenuLink>

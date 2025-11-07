@@ -21,20 +21,18 @@ export default function HeroSection() {
 
       {/* Title */}
       <h1 className="text-3xl sm:text-5xl font-bold tracking-tight">
-        Hi, I'm Jack Harry
+        Hi, I'm Manohar 
       </h1>
 
       {/* Subtitle */}
       <p className="max-w-xl mt-4 text-muted-foreground text-sm sm:text-base">
-        20, I break things, learn fast, and make things happen. Deep into code
-        and CS; anything that pushes the limits. History, curiosity, cricket,
-        and great books shaped me. Still chasing mastery.
+        A developer driven by curiosity and clarity. I learn fast, adapt quickly, and build with intention. Code is where I explore, refine, and push for better. Shaped by books, conversations, and the habit of questioning things. Always growing. Always moving forward.
       </p>
 
       {/* CTA Buttons */}
       <div className="flex flex-col sm:flex-row gap-4 mt-8">
         <Button className="px-6 py-2 rounded-full" asChild>
-          <a href="#">Resume</a>
+          <a href="https://drive.google.com/file/d/1GkEbY6S5Z6XGbl0yxdNqmYuAbWNM9dEt/view?usp=sharing" target="_blank">Resume</a>
         </Button>
         <Button
           variant="secondary"

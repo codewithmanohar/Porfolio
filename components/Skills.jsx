@@ -7,7 +7,7 @@ export const Skills = () => {
 
   return (
     <section className="py-10 flex flex-col items-center  ">
-      <h2 className="title">Skills</h2>
+      <h2 className="title">Skills & Tools</h2>
       <div className="flex flex-wrap justify-start sm:justify-center gap-3 max-w-xl ">
         {skills.map((skill, index) => (
           <Button key={index} variant="outline" size="sm">
